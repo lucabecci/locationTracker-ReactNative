@@ -9,7 +9,7 @@ export default function App() {
   async function buscaLocation(){
     const {status} = await Location.requestBackgroundPermissionsAsync()
     if(status !== 'granted'){
-      return Alert.alert("No tenemos los permisos necesarios para su ubicacion")
+      return Alert.alert("Please activate the ubication for the correct usage")
     }
     const location = await Location.getCurrentPositionAsync({accuracy:Location.Accuracy.High})
     setLocation(location)
